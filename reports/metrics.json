@@ -1,0 +1,73 @@
+{
+  "eda": {
+    "rows": 891,
+    "survival_rate": 0.384,
+    "missing_pct": {
+      "Age": 19.9,
+      "Cabin": 77.1,
+      "Embarked": 0.2
+    },
+    "survival_by_sex": {
+      "female": 0.742,
+      "male": 0.189
+    },
+    "survival_by_class": {
+      "1": 0.63,
+      "2": 0.473,
+      "3": 0.242
+    }
+  },
+  "model_comparison": {
+    "Logistic Regression": {
+      "cv_roc_auc_mean": 0.8661,
+      "cv_roc_auc_std": 0.0201,
+      "test": {
+        "accuracy": 0.8492,
+        "precision": 0.8281,
+        "recall": 0.7681,
+        "f1": 0.797,
+        "roc_auc": 0.8783
+      }
+    },
+    "Decision Tree": {
+      "cv_roc_auc_mean": 0.8364,
+      "cv_roc_auc_std": 0.0265,
+      "test": {
+        "accuracy": 0.7933,
+        "precision": 0.82,
+        "recall": 0.5942,
+        "f1": 0.6891,
+        "roc_auc": 0.8318
+      }
+    },
+    "Random Forest": {
+      "cv_roc_auc_mean": 0.8669,
+      "cv_roc_auc_std": 0.0173,
+      "test": {
+        "accuracy": 0.8212,
+        "precision": 0.7846,
+        "recall": 0.7391,
+        "f1": 0.7612,
+        "roc_auc": 0.8293
+      }
+    }
+  },
+  "best_model": "Random Forest",
+  "best_params": {
+    "model__max_depth": "None",
+    "model__min_samples_leaf": 3,
+    "model__n_estimators": 300
+  },
+  "tuned_cv_roc_auc": 0.8784,
+  "tuned_test_scores": {
+    "accuracy": 0.7933,
+    "precision": 0.7222,
+    "recall": 0.7536,
+    "f1": 0.7376,
+    "roc_auc": 0.852
+  },
+  "train_class_balance": {
+    "0": 0.617,
+    "1": 0.383
+  }
+}
